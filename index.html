@@ -1,0 +1,317 @@
+<xaiArtifact artifact_id="b2f3aa74-407e-4b11-8367-a81b289098c9" title="index.html" contentType="text/html">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>StudyHub - Your Learning Companion</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body class="bg-gray-50">
+        <header class="fixed w-full bg-white shadow-md z-50">
+            <div class="container mx-auto px-4 py-4">
+                <div class="flex justify-between items-center">
+                    <h1 class="text-2xl font-bold text-blue-600">StudyHub</h1>
+                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-100" aria-label="Toggle navigation menu" aria-expanded="false">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                    <nav role="navigation" aria-label="Main navigation" class="nav-menu absolute md:relative top-full left-0 w-full md:w-auto bg-white md:bg-transparent shadow-lg md:shadow-none" aria-hidden="true">
+                        <div class="flex flex-col md:flex-row md:items-center md:space-x-6 p-4 md:p-0">
+                            <a href="#home" class="nav-link text-blue-600 font-semibold px-3 py-2 rounded-lg hover:bg-blue-50 transition-colors">Home</a>
+                            <div class="md:ml-6 space-x-4 mt-4 md:mt-0">
+                                <a href="#signin" class="nav-link text-blue-600 hover:text-blue-700">Sign In</a>
+                                <a href="#signup" class="nav-link bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Sign Up</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+                  <div class="hero-gradient text-white py-20 px-4 mb-16 rounded-3xl">
+                        <div class="text-center max-w-3xl mx-auto">
+                            <h2 class="text-5xl font-bold mb-6">Welcome to StudyHub</h2>
+                            <p class="text-xl mb-8">Your comprehensive learning platform designed to enhance your educational journey.</p>
+                            <a href="#signup" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors inline-flex items-center group">
+                                Get Started
+                                <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                
+                <section id="features" class="mb-12"></section>    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="feature-card bg-white rounded-xl shadow-lg p-6">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">StudyBite</h3>
+                            <p class="text-gray-600">Bite-sized learning modules for quick and effective study sessions.</p>
+                        </div>
+                        
+                        <div class="feature-card bg-white rounded-xl shadow-lg p-6">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">KnowNook</h3>
+                            <p class="text-gray-600">Your personal knowledge hub for storing and organizing study materials.</p>
+                        </div>
+                        
+                        <div class="feature-card bg-white rounded-xl shadow-lg p-6">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">StudySync</h3>
+                            <p class="text-gray-600">Synchronize your study progress across devices and collaborate with peers.</p>
+                        </div>
+                        
+                        <div class="feature-card bg-white rounded-xl shadow-lg p-6">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">MindMesh</h3>
+                            <p class="text-gray-600">Create interactive mind maps and connect concepts effectively.</p>
+                        </div>
+                        
+                        <div class="feature-card bg-white rounded-xl shadow-lg p-6">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">Cheat Notes</h3>
+                            <p class="text-gray-600">Quick reference guides and summary sheets for rapid revision.</p>
+                        </div>
+                        
+                        <div class="feature-card bg-white rounded-xl shadow-lg p-6">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">Timetable</h3>
+                            <p class="text-gray-600">Organize your study schedule and manage time effectively.</p>
+                        </div>
+                        
+                        <div class="feature-card bg-white rounded-xl shadow-lg p-6">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">Syllabus Scheduler</h3>
+                            <p class="text-gray-600">Plan your curriculum and track progress throughout the semester.</p>
+                        </div>
+                    </div>
+                </section>
+    
+                <!-- KnowNook Section -->
+                <section id="knowNook" class="mb-12" aria-labelledby="knowNook-title">
+                    <h2 id="knowNook-title" class="text-2xl font-bold text-gray-800 mb-6">KnowNook - AI-Powered Doubt Solving</h2>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="w-full">
+                            <form id="doubtForm" class="space-y-4">
+                                <div>
+                                    <label for="doubtInput" class="block text-sm font-medium text-gray-700 mb-2">Enter your doubt:</label>
+                                    <textarea id="doubtInput" 
+                                              class="w-full h-32 px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:border-blue-500" 
+                                              placeholder="Type your question here..."
+                                              aria-describedby="doubtHelp"></textarea>
+                                    <p id="doubtHelp" class="text-sm text-gray-500 mt-1">Ask any academic question and get instant AI-powered answers.</p>
+                                </div>
+                                <button type="submit" 
+                                        class="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg transition-colors"
+                                        aria-label="Get answer for your doubt">
+                                    Get Answer
+                                </button>
+                            </form>
+                            <div id="doubtOutput" class="mt-6" aria-live="polite">
+                                <!-- Answer will be displayed here -->
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <h3 class="text-xl font-semibold text-gray-700 mb-4">Recent Questions</h3>
+                            <div id="doubtHistory" class="space-y-4">
+                                <!-- Doubt history will be displayed here -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+              
+    
+            <section id="comments" class="bg-white rounded-xl shadow-lg p-6 mb-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Student Comments</h2>
+                <form id="comment-form" class="space-y-4">
+                    <div>
+                        <label for="comment-text" class="block text-sm font-medium text-gray-700 mb-2">Share your thoughts:</label>
+                        <textarea id="comment-text" name="comment" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required></textarea>
+                    </div>
+                    <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">Post Comment</button>
+                </form>
+                <div id="comments-display" class="mt-8 space-y-4" aria-live="polite">
+                    <p class="text-gray-600">Be the first to comment!</p>
+                </div>
+            </section>
+        </main>
+    
+        <footer class="bg-gray-800 text-white py-12">
+            <div class="container mx-auto px-4">
+                <section class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6 text-center">Student Reviews</h2>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="bg-gray-700 p-6 rounded-lg transform hover:-translate-y-1 transition-transform">
+                            <blockquote class="text-gray-300">
+                                <p class="mb-4">"StudyHub has completely transformed my learning experience!"</p>
+                                <cite class="text-sm">- Sarah Johnson, Computer Science Student</cite>
+                            </blockquote>
+                        </div>
+                        <div class="bg-gray-700 p-6 rounded-lg transform hover:-translate-y-1 transition-transform">
+                            <blockquote class="text-gray-300">
+                                <p class="mb-4">"The interactive features and clean design make studying enjoyable."</p>
+                                <cite class="text-sm">- Michael Chen, Engineering Student</cite>
+                            </blockquote>
+                        </div>
+                        <div class="bg-gray-700 p-6 rounded-lg transform hover:-translate-y-1 transition-transform">
+                            <blockquote class="text-gray-300">
+                                <p class="mb-4">"Finally, a learning platform that understands student needs!"</p>
+                                <cite class="text-sm">- Emily Rodriguez, Medical Student</cite>
+                            </blockquote>
+                        </div>
+                    </div>
+                </section>
+    
+                <!-- KnowNook Section -->
+               
+    
+                <div class="grid md:grid-cols-4 gap-8 text-center md:text-left">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">About</h3>
+                        <ul class="space-y-2">
+                            <li><a href="/about" class="hover:text-blue-400 transition-colors">Our Story</a></li>
+                            <li><a href="/team" class="hover:text-blue-400 transition-colors">Team</a></li>
+                            <li><a href="/careers" class="hover:text-blue-400 transition-colors">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Resources</h3>
+                        <ul class="space-y-2">
+                            <li><a href="/blog" class="hover:text-blue-400 transition-colors">Blog</a></li>
+                            <li><a href="/guides" class="hover:text-blue-400 transition-colors">Study Guides</a></li>
+                            <li><a href="/faq" class="hover:text-blue-400 transition-colors">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                        <ul class="space-y-2">
+                            <li><a href="/privacy" class="hover:text-blue-400 transition-colors">Privacy Policy</a></li>
+                            <li><a href="/terms" class="hover:text-blue-400 transition-colors">Terms of Service</a></li>
+                            <li><a href="/cookies" class="hover:text-blue-400 transition-colors">Cookie Policy</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Connect</h3>
+                        <ul class="space-y-2">
+                            <li><a href="/contact" class="hover:text-blue-400 transition-colors">Contact Us</a></li>
+                            <li><a href="https://twitter.com" class="hover:text-blue-400 transition-colors">Twitter</a></li>
+                            <li><a href="https://linkedin.com" class="hover:text-blue-400 transition-colors">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+        <script>
+            // Initialize the first view to show home section
+            document.addEventListener('DOMContentLoaded', () => {
+                showSection('home');
+            });
+    
+            // Mobile menu functionality
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const navMenu = document.querySelector('.nav-menu');
+    
+            mobileMenuButton.addEventListener('click', () => {
+                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+                navMenu.classList.toggle('show');
+                navMenu.setAttribute('aria-hidden', isExpanded);
+            });
+    
+            // Tab navigation functionality
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('.section-content');
+    
+            function showSection(sectionId) {
+                sections.forEach(section => {
+                    section.classList.add('hidden');
+                    if (section.id === 'home') {
+                        section.classList.remove('hidden');
+                    }
+                });
+    
+                if (sectionId !== 'home') {
+                    const targetSection = document.getElementById(sectionId);
+                    if (targetSection) {
+                        sections.forEach(section => section.classList.add('hidden'));
+                        targetSection.classList.remove('hidden');
+                    }
+                }
+    
+                navLinks.forEach(link => {
+                    link.classList.remove('text-blue-600', 'font-semibold');
+                    link.classList.add('text-gray-600');
+                    if (link.getAttribute('href') === `#${sectionId}`) {
+                        link.classList.remove('text-gray-600');
+                        link.classList.add('text-blue-600', 'font-semibold');
+                    }
+                });
+            }
+    
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const sectionId = link.getAttribute('href').substring(1);
+                    showSection(sectionId);
+                    if (window.innerWidth < 768) {
+                        navMenu.classList.remove('show');
+                        mobileMenuButton.setAttribute('aria-expanded', 'false');
+                        navMenu.setAttribute('aria-hidden', 'true');
+                    }
+                });
+            });
+    
+            // Handle Escape key for mobile menu
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && navMenu.classList.contains('show')) {
+                    navMenu.classList.remove('show');
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
+                    navMenu.setAttribute('aria-hidden', 'true');
+                    mobileMenuButton.focus();
+                }
+            });
+    
+            // Comment section functionality
+            const commentForm = document.getElementById('comment-form');
+            const commentText = document.getElementById('comment-text');
+            const commentsDisplay = document.getElementById('comments-display');
+    
+            commentForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const comment = commentText.value.trim();
+                if (!comment) return;
+    
+                const timestamp = new Date().toLocaleString();
+                if (commentsDisplay.querySelector('p.text-gray-600')) {
+                    commentsDisplay.innerHTML = '';
+                }
+                const commentElement = document.createElement('div');
+                commentElement.className = 'bg-gray-50 p-4 rounded-lg';
+                commentElement.innerHTML = `
+                    <p class="text-gray-800 mb-2">${comment}</p>
+                    <div class="text-sm text-gray-600">
+                        <span>Posted by Student</span>
+                        <span class="mx-2">•</span>
+                        <time>${timestamp}</time>
+                    </div>
+                `;
+    
+                if (commentsDisplay.firstChild.classList?.contains('text-gray-600')) {
+                    commentsDisplay.innerHTML = '';
+                }
+                commentsDisplay.insertBefore(commentElement, commentsDisplay.firstChild);
+                commentText.value = '';
+            });
+    
+            // Initialize with home section visible
+            showSection('home');
+    
+            // Keyboard navigation for mobile menu
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && navMenu.classList.contains('show')) {
+                    navMenu.classList.remove('show');
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
+                }
+            });
+        </script>
+    </body>
+    </html>
+    </xaiArtifact>

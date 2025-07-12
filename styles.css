@@ -1,0 +1,120 @@
+
+
+:root {
+    --primary-color: #1D4ED8;
+    --secondary-color: #10B981;
+    --neutral-color: #F3F4F6;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Header and Navigation */
+.nav-menu {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.nav-menu.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+@media (min-width: 768px) {
+    .nav-menu {
+        transform: none;
+        display: flex !important;
+        opacity: 1;
+    }
+}
+
+/* Sticky Header Animation */
+.header-scroll {
+
+    transform: translateY(-100%);
+    animation: slideDown 0.5s forwards;
+}
+
+@keyframes slideDown {
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Feature Cards */
+.feature-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+/* Loading Spinner */
+.spinner {
+    width: 24px;
+    height: 24px;
+    border: 3px solid var(--neutral-color);
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Toast Notification */
+.toast {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: white;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.toast.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Hero Section Gradient */
+.hero-gradient {
+    background: linear-gradient(135deg, var(--primary-color), #1E40AF);
+}
+
+/* Active Navigation Link */
+.nav-link.active {
+    position: relative;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    transform: scaleX(0);
+    animation: slideIn 0.3s forwards;
+}
+
+@keyframes slideIn {
+    to {
+        transform: scaleX(1);
+    }
+}
+.grid section   {
+    margin-bottom: 10 px;
+}
